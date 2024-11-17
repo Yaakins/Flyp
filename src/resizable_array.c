@@ -33,7 +33,6 @@ int *append_i(r_arr *target, int n) {
     memcpy(new_data, target->data, target->length);
     free(target->data);
     target->data = new_data;
-    //target->data = realloc(target->data, target->length * 2);
     target->allocated_length = target->length*2;
   }
   ((int*)target->data)[target->length] = n;
@@ -76,7 +75,7 @@ void *append(r_arr *target, void *element_addr, int element_size) {
     target->data = memcpy(new_data, target->data, target->length * target->element_size);
     free(old_data);
     target->allocated_length = target->length*2;
-    printf("Resized array from %d to %d elements\n", target->length, target->allocated_length);
+    //printf("Resized array from %d to %d elements\n", target->length, target->allocated_length);
   }
   memcpy(target->data + (target->element_size * target->length), element_addr, element_size);
 

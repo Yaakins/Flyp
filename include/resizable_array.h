@@ -2,7 +2,6 @@
 #define _RESIZABLE_ARRAY_H_
 
 #include <stdlib.h>
-#include <stdio.h>
 #include <errno.h>
 #include <string.h>
 

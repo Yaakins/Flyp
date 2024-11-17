@@ -1,4 +1,5 @@
 #include "resizable_array.h"
+#include <stdio.h>
 
 void print_array(r_arr *target) {
   printf("[");
